@@ -83,8 +83,8 @@ RUN chmod 755 /opt/sgx_linux_x64_sdk.bin
 RUN /opt/sgx_linux_x64_sdk.bin --prefix /opt/intel
 
 
-RUN git clone https://github.com/Abhiroop/HasTEE.git
-WORKDIR "/HasTEE"
+RUN git clone https://github.com/martinovjulian/docker-hastee.git
+WORKDIR "/docker-hastee"
 RUN cabal update
 RUN apt-get install -y libgmp3-dev
 RUN cabal build --project-file=cabal-nosgx.project
