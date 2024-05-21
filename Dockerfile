@@ -29,7 +29,8 @@ RUN apt-get update -y && \
 		cmake=3.22.1-1ubuntu1.22.04.2 \
 		python3=3.10.6-1~22.04 \
 		python3-venv=3.10.6-1~22.04 \
-		python3-pip=22.0.2+dfsg-1ubuntu0.4 
+		python3-pip=22.0.2+dfsg-1ubuntu0.4 \
+        clang 
         
         
 # install ghcup
