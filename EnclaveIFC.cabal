@@ -102,7 +102,7 @@ executable EnclaveIFC-exe
              cbits/mbedtls-mbedtls-3.2.1/library/padlock.c
              cbits/mbedtls-mbedtls-3.2.1/library/oid.c
              cbits/mbedtls-mbedtls-3.2.1/library/platform.c
-             cbits/mbedtls-mbedtls-3.2.1/library/version_features.c
+             cbits/mbedtls-mbedtls-3.2.1/library/version_features2.c
              cbits/mbedtls-mbedtls-3.2.1/library/ssl_debug_helpers_generated.c
              cbits/mbedtls-mbedtls-3.2.1/library/pkwrite.c
              cbits/mbedtls-mbedtls-3.2.1/library/psa_crypto.c
