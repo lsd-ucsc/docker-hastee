@@ -87,6 +87,11 @@ RUN git clone https://github.com/martinovjulian/docker-hastee.git
 WORKDIR "/docker-hastee"
 RUN cabal update
 RUN apt-get install -y libgmp3-dev
+RUN openssl genrsa -out ssl/ca.key 2048
+RUN openssl req -x509 -new -nodes -key ssl/ca.key -sha256 -days 1024 -out ssl/ca.crt -config ssl/ca_config.conf
+RUN openssl genrsa -out ssl/server.key 2048
+RUN openssl req -new -key ssl/server.key -out ssl/server.csr -config ssl/ca_config.conf
+RUN openssl x509 -req -days 360 -in ssl/server.csr -CA ssl/ca.crt -CAkey ssl/ca.key -CAcreateserial -out ssl/server.crt
 RUN cabal build --project-file=cabal-nosgx.project
 
 
