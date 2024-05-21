@@ -84,10 +84,11 @@ RUN chmod 755 /opt/sgx_linux_x64_sdk.bin
 RUN /opt/sgx_linux_x64_sdk.bin --prefix /opt/intel
 
 
-RUN git clone https://github.com/martinovjulian/docker-hastee.git
-WORKDIR "/docker-hastee"
 RUN cabal update
 RUN apt-get install -y libgmp3-dev
+RUN git clone https://github.com/martinovjulian/docker-hastee.git
+WORKDIR "/docker-hastee"
+RUN pip install jinja2
 RUN openssl genrsa -out ssl/ca.key 2048
 RUN openssl req -x509 -new -nodes -key ssl/ca.key -sha256 -days 1024 -out ssl/ca.crt -config ssl/ca_config.conf
 RUN openssl genrsa -out ssl/server.key 2048
@@ -97,8 +98,8 @@ RUN cabal build --project-file=cabal-nosgx.project
 
 
 # APT clean up
-RUN apt-get autoremove -y
-RUN apt-get clean all
+# RUN apt-get autoremove -y
+# RUN apt-get clean all
 ################################################################################
 
 ENV DEBIAN_FRONTEND=
@@ -108,5 +109,6 @@ ENV LANG=C.UTF-8
 # entrypoint
 
 
-ENTRYPOINT [ "/bin/sgx-init", "/bin/bash" ]
+# ENTRYPOINT [ "/bin/sgx-init", "/bin/bash" ]
 
+ENTRYPOINT [ "/bin/bash" ]
