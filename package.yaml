@@ -43,7 +43,7 @@ library:
   source-dirs: src
   dependencies:
     - binary
-    - bytestring
+    - bytestring >= 0.11
     - network-simple
     - transformers
   when:
@@ -71,7 +71,7 @@ executables:
     dependencies:
     - EnclaveIFC
     - binary
-    - bytestring
+    - bytestring >= 0.11
     - network-simple
     - transformers
 
