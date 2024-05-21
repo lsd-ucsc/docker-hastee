@@ -10,7 +10,7 @@
  * Note that this program builds against mbedTLS 3.x.
  */
 
-#include "mbedtls/build_info.h"
+#include "mbedtls/include/build_info.h"
 
 #include <assert.h>
 #include <ctype.h>
