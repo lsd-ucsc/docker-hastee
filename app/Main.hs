@@ -246,7 +246,7 @@ ifctest = do
   db <- liftNewRef dcPublic database -- db kept permissive because all
                                      -- data is labeled
   sfunc    <- inEnclave initState $ sendData db
-  pubK     <- liftIO $ read <$> readFile "ssl/public.key"
+  pubK     <- liftIO $ read <$> readFile "ssl/ca.key"
   org1Priv <- liftIO $ privInit (toCNF org1)
   org2Priv <- liftIO $ privInit (toCNF org2)
   qfunc    <- inEnclave initState $ runQuery db pubK org1Priv org2Priv
