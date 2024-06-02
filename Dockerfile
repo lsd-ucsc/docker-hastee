@@ -37,7 +37,7 @@ RUN apt-get update -y && \
 RUN curl https://downloads.haskell.org/~ghcup/x86_64-linux-ghcup > /usr/bin/ghcup 
 RUN chmod +x /usr/bin/ghcup 
 
-ARG GHC=8.10.7
+ARG GHC=8.6.5
 ARG CABAL=latest
 
 # install GHC and cabal
