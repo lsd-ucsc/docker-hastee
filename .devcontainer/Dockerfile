@@ -86,7 +86,7 @@ RUN /opt/sgx_linux_x64_sdk.bin --prefix /opt/intel
 
 RUN cabal update
 RUN apt-get install -y libgmp3-dev
-RUN git clone https://github.com/martinovjulian/docker-hastee.git
+RUN git clone https://github.com/lsd-ucsc/docker-hastee.git
 WORKDIR "/docker-hastee"
 RUN pip install jinja2
 RUN openssl genrsa -out ssl/ca.key 2048
