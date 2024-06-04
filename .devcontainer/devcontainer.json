@@ -1,7 +1,4 @@
 {
-  "name": "Haskell (Community)",
-  // uncomment to download container image from Docker Hub
-
   // uncomment to build container locally
     "build": {
     "dockerfile": "Dockerfile",
