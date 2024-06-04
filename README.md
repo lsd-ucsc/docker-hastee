@@ -26,3 +26,7 @@ Modified version of HasTEE to work in docker container
 15. in build.mk add the flags "BUILD_SPHINX_HTML = NO" and "BUILD_SPHINX_PDF = NO" without the quotes on separate lines
 14. make
 15. refer to https://gitlab.haskell.org/ghc/ghc/-/wikis/building/using
+
+## Building and Running the HasTEE Enclave/Client
+- Refer to https://github.com/Abhiroop/HasTEE/tree/master
+- Users will have to modify the cabal.project file to include the path to their ghc-trusted binary mentioned above
