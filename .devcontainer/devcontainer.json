@@ -3,8 +3,7 @@
     "build": {
     "dockerfile": "Dockerfile",
     "args": {
-        // Update 'GHC_VERSION' to pick a GHC version: recommended, latest, 9.2, 9.0, 8.10, 8.8, 8.6
-        "GHC_VERSION": "8.6.5"
+      // Update 'GHC_VERSION' to pick a GHC version: recommended, latest, 9.2, 9.0, 8.10, 8.8, 8.6
     }
 },
   // Configure tool-specific properties.
