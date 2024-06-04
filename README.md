@@ -29,4 +29,4 @@ Modified version of HasTEE to work in docker container
 
 ## Building and Running the HasTEE Enclave/Client
 - Refer to https://github.com/Abhiroop/HasTEE/tree/master
-- Users will have to modify the cabal.project file to include the path to their ghc-trusted binary mentioned above
+- Users will have to modify the cabal.project file to include the path to their ghc-trusted binary mentioned above.
