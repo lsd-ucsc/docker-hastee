@@ -1,5 +1,5 @@
 # docker-hastee
-Modified version of HasTEE to work in docker container
+Modified version of HasTEE to work in docker container.
 
 ## Instructions
 1. Make sure you have Docker installed
